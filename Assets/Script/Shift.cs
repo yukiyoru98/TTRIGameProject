@@ -5,7 +5,8 @@ using UnityEngine;
 public class Shift : MonoBehaviour
 {
 
-    public float speed = 1f;
+    public float speed = 1000f;
+    public Rigidbody2D rigid2D;
 
     // Start is called before the first frame update
     void Start()
@@ -18,22 +19,23 @@ public class Shift : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.position += new Vector3(-speed, 0, 0);
+            rigid2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.position += new Vector3(speed, 0, 0);
+            rigid2D.AddForce(new Vector2(speed, 0), ForceMode2D.Force);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            transform.position += new Vector3(0, -speed, 0);
+            //rigid2D.AddForce(new Vector2(0, 1000), ForceMode2D.Impulse);
+            transform.position += new Vector3(0, -1f, 0);
         }
     }
 }
 
-//­n¤@®æ¤@®æ¦a±¼¤U¨Ó¡AÁÙ¬O³sÄò¡H
+//è¦ä¸€æ ¼ä¸€æ ¼åœ°æ‰ä¸‹ä¾†ï¼Œé‚„æ˜¯é€£çºŒï¼Ÿ
 
-//¥ª¥k¬O¥[¤W¥[³t«×
-//¦V¤U¤]¬O¥[¤W¤@­Ó³t«×
-//¼²¨ì¦aªO¤§«á´N¤£¯à¦A²¾°Ê¤F
+//å·¦å³æ˜¯åŠ ä¸ŠåŠ é€Ÿåº¦
+//å‘ä¸‹ä¹Ÿæ˜¯åŠ ä¸Šä¸€å€‹é€Ÿåº¦
+//æ’åˆ°åœ°æ¿ä¹‹å¾Œå°±ä¸èƒ½å†ç§»å‹•äº†
 
