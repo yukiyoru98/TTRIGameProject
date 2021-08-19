@@ -17,17 +17,17 @@ public class Shift : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if(Input.GetKey(KeyCode.LeftArrow))
         {
             rigid2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             rigid2D.AddForce(new Vector2(speed, 0), ForceMode2D.Force);
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
-            //rigid2D.AddForce(new Vector2(0, 1000), ForceMode2D.Impulse);
+            //rigid2D.AddForce(new Vector2(0, 1000f), ForceMode2D.Force);
             transform.position += new Vector3(0, -1f, 0);
         }
     }
@@ -35,7 +35,5 @@ public class Shift : MonoBehaviour
 
 //要一格一格地掉下來，還是連續？
 
-//左右是加上加速度
 //向下也是加上一個速度
-//撞到地板之後就不能再移動了
-
+//旋轉、東西撞到地面或確定跌落之後就不能再動，而且要創造出新的方塊
