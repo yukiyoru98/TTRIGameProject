@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 6692112791909717932}
   m_Layer: 0
   m_Name: Tetromino O
-  m_TagString: Untagged
+  m_TagString: Tetro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
