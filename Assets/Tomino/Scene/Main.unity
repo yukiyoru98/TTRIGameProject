@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 1824155691}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,13 +616,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1824155690}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10ebabaf426496438dcdb55a37d8f2d, type: 3}
+  m_Script: {fileID: 11500000, guid: eebae4f8ff29a5e4990ca123d0c218e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   groups:
-  - {fileID: 6862386826863234151, guid: d9cc458c6e0cdb646bf92db4e9fa8c63, type: 3}
-  - {fileID: 778657854382600684, guid: 58d57e2bd81e3f74f975826f8316b0d2, type: 3}
-  - {fileID: 7586678793622449698, guid: e73ea3f1ecf8de54cb16fa6ab38491d8, type: 3}
+  - {fileID: 0}
+  - {fileID: 7333263960276471206, guid: e5793d4c222fde540a608ce93affa81f, type: 3}
+  - {fileID: 5031113517084315300, guid: 37b04724907e28746a0afaa7e4ec05d4, type: 3}
   - {fileID: 2268082641752401447, guid: 90c6ac2906ace2b42a5125e1471db1dd, type: 3}
   - {fileID: 7501808930569378735, guid: 9cf7ca739d5d19940aa28411321413af, type: 3}
   - {fileID: 238302581495502627, guid: de2ad8601c5761249b048279c8bab2bd, type: 3}

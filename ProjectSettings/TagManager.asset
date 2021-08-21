@@ -9,6 +9,7 @@ TagManager:
   - BoxKiller
   - healthpoint1
   - healthpoint2
+  - Spawner
   layers:
   - Default
   - TransparentFX
