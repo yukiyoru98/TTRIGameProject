@@ -43,14 +43,19 @@ public class TetroControl : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Spawner")
+        {
+            if (isFirstCollisionEnter == false)
+            {
+                print("Win!");
+            }
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // To win the game 如果方塊同時(1)接觸到方塊(2)接觸到頂點，則判定勝利。但是目前系統似乎是不理我，不清楚為什麼？
-        if (collision.gameObject.tag == "Tetro" && collision.gameObject.tag == "Spawner")
-        {
-            Destroy(this.gameObject);
-            print("Win!");
-        }
         // Create new tetros when colliding with Platform
         if (collision.gameObject.tag == "Platform")
         {

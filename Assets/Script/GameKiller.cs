@@ -23,6 +23,10 @@ public class GameKiller : MonoBehaviour
         {
             Destroy(GameObject.FindWithTag("healthpoint1"));
         }
+        if (hp <= 0)
+        {
+            print("Lost!");
+        }
     }
 
     // Health point deduction 方塊不規則形導致boxcollider有兩個以上，因此有時候會一次有兩個碰撞事件發生，導致血量直接2滴，不知道該怎麼解？
