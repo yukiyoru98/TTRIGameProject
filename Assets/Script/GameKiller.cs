@@ -23,9 +23,9 @@ public class GameKiller : MonoBehaviour
         {
             Destroy(GameObject.FindWithTag("healthpoint1"));
         }
-        if (hp <= 0)
+        if (hp <= 0) //to lose
         {
-            print("Lost!");
+            FindObjectOfType<End>().EndLose();
         }
     }
 

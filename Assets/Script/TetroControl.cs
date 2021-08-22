@@ -43,13 +43,14 @@ public class TetroControl : MonoBehaviour
         }
     }
 
+    //To win
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Spawner")
         {
             if (isFirstCollisionEnter == false)
             {
-                print("Win!");
+                FindObjectOfType<End>().EndWin();
             }
         }
     }
@@ -98,11 +99,11 @@ public class TetroControl : MonoBehaviour
 }
 
 
-//如果方塊同時(1)接觸到方塊(2)接觸到頂點，則判定勝利。但是目前系統似乎是不理我，不清楚為什麼？
 
 //在按住左右鍵的時候沒辦法按其它按鍵
 //方塊如果在旋轉或下降時太靠近平台，有可能會卡住
 //方塊如果兩個一起接觸boxkiller的話，會有重複扣血導致愛心無法正確顯示的問題
+//如果遊戲失敗結束後，選擇重新玩的話，方塊會停在空中而且無法左右程動
 
 
-//如果要access GameKiller的話，可以使用 FindObjectOfType<GameKiller>().HPDeduction(); 但要記得在該檔案中新增HPDeduction()的function
+//如果要access GameKiller的某個function的話，可以使用 FindObjectOfType<GameKiller>().HPDeduction(); 但要記得在該檔案中新增public void HPDeduction()的function
