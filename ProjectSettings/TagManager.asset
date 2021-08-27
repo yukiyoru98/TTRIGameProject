@@ -10,6 +10,12 @@ TagManager:
   - healthpoint1
   - healthpoint2
   - Spawner
+  - Tetro2
+  - Tetro3
+  - Spawner2
+  - Spawner3
+  - Platform2
+  - Platform3
   layers:
   - Default
   - TransparentFX
