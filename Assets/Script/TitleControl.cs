@@ -22,4 +22,10 @@ public class TitleControl : MonoBehaviour
         print("GameStart");
         SceneManager.LoadScene("game");
     }
+
+    public void DoubleGameSart()
+    {
+        print("GameStart");
+        SceneManager.LoadScene("game2");
+    }
 }
