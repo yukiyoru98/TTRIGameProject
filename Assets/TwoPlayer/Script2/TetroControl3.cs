@@ -27,16 +27,16 @@ public class TetroControl3 : MonoBehaviour
             {
                 rigid2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
             }
-            else if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D))
             {
                 rigid2D.AddForce(new Vector2(speed, 0), ForceMode2D.Force);
             }
-            else if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S))
             {
                 //rigid2D.AddForce(new Vector2(0, 1000f), ForceMode2D.Force);
                 transform.position += new Vector3(0, -1f, 0);
             }
-            else if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W))
             {
                 transform.Rotate(0, 0, -90);
             }

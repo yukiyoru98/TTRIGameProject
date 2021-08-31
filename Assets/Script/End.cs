@@ -44,7 +44,7 @@ public class End : MonoBehaviour
         //}
     }
 
-    //If win is triggered from TetroControl/void OnTriggerEnter2D(Collider2D other)
+    //If win is triggered from GameKiller/void Update()/if (hp <= 0)
     public void EndWin()
     {
         windowSwitch = 1;

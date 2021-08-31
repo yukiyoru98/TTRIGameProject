@@ -336,7 +336,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8281623817278011787}
-  - component: {fileID: 6882764304218617880}
   - component: {fileID: 8005336260658951483}
   - component: {fileID: 4437738787267540512}
   - component: {fileID: 4894625768177222312}
@@ -365,20 +364,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6882764304218617880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7333263960276471206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9367caa975441e49aaaf5574370eafa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  rigid2D: {fileID: 8005336260658951483}
 --- !u!50 &8005336260658951483
 Rigidbody2D:
   serializedVersion: 4

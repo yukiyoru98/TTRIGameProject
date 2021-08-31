@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameKiller : MonoBehaviour
 {
     public int hp = 3;
+    private bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +24,10 @@ public class GameKiller : MonoBehaviour
         {
             Destroy(GameObject.FindWithTag("healthpoint1"));
         }
-        if (hp <= 0) //to lose
+        if (!isDead && hp <= 0) //to lose
         {
             FindObjectOfType<End>().EndLose();
+            isDead = true;
         }
     }
 

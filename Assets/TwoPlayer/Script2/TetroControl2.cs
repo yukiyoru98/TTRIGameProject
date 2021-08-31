@@ -27,16 +27,16 @@ public class TetroControl2 : MonoBehaviour
             {
                 rigid2D.AddForce(new Vector2(-speed, 0), ForceMode2D.Force);
             }
-            else if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow))
             {
                 rigid2D.AddForce(new Vector2(speed, 0), ForceMode2D.Force);
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 //rigid2D.AddForce(new Vector2(0, 1000f), ForceMode2D.Force);
                 transform.position += new Vector3(0, -1f, 0);
             }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 transform.Rotate(0, 0, -90);
             }
@@ -60,7 +60,6 @@ public class TetroControl2 : MonoBehaviour
         // Create new tetros when colliding with Platform
         if (collision.gameObject.tag == "Platform2")
         {
-            print("Hit!");
             if (isFirstCollisionEnter == true)
             {
                 // NEW : 若為 第一次碰撞(isFirstCollisionEnter == true)，則進行 spawnNext() 產生新方塊
