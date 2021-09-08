@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class End : MonoBehaviour
 {
+    public static End self;
+    
     // public
     public int windowWidth = 400;
     public int windowHight = 150;
@@ -13,7 +15,7 @@ public class End : MonoBehaviour
     Rect windowRect;
     int windowSwitch = 0;
     float alpha = 0;
-
+    int _player = 0;
     void GUIAlphaColor_0_To_1()
     {
         if (alpha < 1)
@@ -26,6 +28,7 @@ public class End : MonoBehaviour
     // Init
     void Awake()
     {
+        self = this;
         windowRect = new Rect(
             (Screen.width - windowWidth) / 2,
             (Screen.height - windowHight) / 2,
@@ -45,8 +48,9 @@ public class End : MonoBehaviour
     }
 
     //If win is triggered from GameKiller/void Update()/if (hp <= 0)
-    public void EndWin()
+    public void EndWin(int player)
     {
+        _player = player;
         windowSwitch = 1;
         alpha = 0; // Init Window Alpha Color
         Time.timeScale = 0f;
@@ -68,7 +72,14 @@ public class End : MonoBehaviour
 
     void WinWindow(int windowID)
     {
-        GUI.Label(new Rect(183, 50, 300, 30), "勝利!");
+        if (_player != 0)
+        {
+            GUI.Label(new Rect(175, 50, 300, 30), $"玩家{_player}勝利!");
+        }
+        else
+        {
+            GUI.Label(new Rect(183, 50, 300, 30), "勝利!");
+        }
 
         if (GUI.Button(new Rect(80, 110, 100, 20), "回到首頁"))
         {
@@ -77,7 +88,8 @@ public class End : MonoBehaviour
         }
         if (GUI.Button(new Rect(220, 110, 100, 20), "再玩一遍"))
         {
-            SceneManager.LoadScene("game");
+            //SceneManager.LoadScene("game");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Time.timeScale = 1f;
         }
         GUI.DragWindow();
@@ -102,7 +114,8 @@ public class End : MonoBehaviour
         }
         if (GUI.Button(new Rect(220, 110, 100, 20), "再玩一遍"))
         {
-            SceneManager.LoadScene("game");
+            //SceneManager.LoadScene("game");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             Time.timeScale = 1f;
         }
         GUI.DragWindow();

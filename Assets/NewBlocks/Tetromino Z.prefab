@@ -445,8 +445,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 382150022737472176}
-  - component: {fileID: 549104221767353648}
   - component: {fileID: 978046921633796417}
+  - component: {fileID: 5271613052854959035}
   m_Layer: 0
   m_Name: Tetromino Z
   m_TagString: Tetro
@@ -463,7 +463,7 @@ Transform:
   m_GameObject: {fileID: 8734614995809164712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1, y: 10, z: -3.496518}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8212104028136140333}
   - {fileID: 8705355140094877220}
@@ -472,20 +472,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &549104221767353648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8734614995809164712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9367caa975441e49aaaf5574370eafa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  rigid2D: {fileID: 978046921633796417}
 --- !u!50 &978046921633796417
 Rigidbody2D:
   serializedVersion: 4
@@ -507,3 +493,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5271613052854959035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734614995809164712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e22e03526261324fbfae6c086fbfaad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigid2D: {fileID: 978046921633796417}

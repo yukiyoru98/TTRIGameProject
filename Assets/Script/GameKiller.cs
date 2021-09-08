@@ -2,47 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameKiller : MonoBehaviour
+public class GameKiller : MonoBehaviour //attach on BoxKiller
 {
-    public int hp = 3;
-    private bool isDead = false;
-
-    // Start is called before the first frame update
-    void Start()
+    public GameObject[] HP;
+    private int hp = 2;
+    
+    public void HPReduction()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (hp <= 2)
+        hp -= 1;
+        if (hp >= 0 && hp < HP.Length)
         {
-            Destroy(GameObject.FindWithTag("healthpoint2"));
+            SetHPImage();
         }
-        if (hp <= 1)
+        if (hp < 0) //check lose
         {
-            Destroy(GameObject.FindWithTag("healthpoint1"));
-        }
-        if (!isDead && hp <= 0) //to lose
-        {
-            FindObjectOfType<End>().EndLose();
-            isDead = true;
+            End.self.EndLose();
         }
     }
 
-    // Health point deduction 方塊不規則形導致boxcollider有兩個以上，因此有時候會一次有兩個碰撞事件發生，導致血量直接2滴，不知道該怎麼解？
-
-    void OnCollisionEnter2D(Collision2D collision)
+    private void SetHPImage()
     {
-        if (collision.gameObject.tag == "Tetro")
-        {
-            hp--;
-        }
+        HP[hp].SetActive(false);
     }
-
-    //public void HPDeduction()
-    //{
-    //    hp -= 1;
-    //}
 }
