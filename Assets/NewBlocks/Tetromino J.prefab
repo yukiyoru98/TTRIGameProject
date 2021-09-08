@@ -338,6 +338,7 @@ GameObject:
   - component: {fileID: 8281623817278011787}
   - component: {fileID: 8005336260658951483}
   - component: {fileID: -5952320421083338748}
+  - component: {fileID: 6984150816777994235}
   m_Layer: 0
   m_Name: Tetromino J
   m_TagString: Tetro
@@ -397,6 +398,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigid2D: {fileID: 8005336260658951483}
+--- !u!66 &6984150816777994235
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7333263960276471206}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 1
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths: []
+  m_CompositePaths:
+    m_Paths: []
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
 --- !u!1 &8602850356299319916
 GameObject:
   m_ObjectHideFlags: 0
