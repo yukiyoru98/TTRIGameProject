@@ -16,6 +16,7 @@ TagManager:
   - Spawner3
   - Platform2
   - Platform3
+  - Goal
   layers:
   - Default
   - TransparentFX
