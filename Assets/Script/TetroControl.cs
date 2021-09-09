@@ -11,7 +11,7 @@ public class TetroControl : MonoBehaviour //attached on Player
     private void OnEnable()
     {
         player = GetComponent<PlayerControl>();
-        player.weightDistributor.OnChangeWeightEvent += MoveTetro;
+        player.weightControl.OnChangeWeightEvent += MoveTetro;
     }
 
     private void Start()
@@ -43,7 +43,7 @@ public class TetroControl : MonoBehaviour //attached on Player
         current_tetro.OnHitBoxKillerEvent += HitBoxKiller;
         current_tetro.OnHitGoalEvent += HitGoal;
         current_tetro.OnLandEvent += Land;
-        player.weightDistributor.ResetWeight();
+        player.weightControl.ResetWeight();
     }
 
     private void Land(Tetro t)

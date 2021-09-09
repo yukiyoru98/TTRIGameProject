@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118330328627161429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 3.496518}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212975231926204295}
@@ -135,7 +135,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173048949587486403}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 3.496518}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212975231926204295}
@@ -244,7 +244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009492871057777147}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 3.496518}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212975231926204295}
@@ -353,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5236765998099670910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 3.496518}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 212975231926204295}
@@ -463,7 +463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6862386826863234151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.05, y: 11.74, z: -3.496518}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4597987934011999884}
@@ -524,8 +524,52 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 504164942386335312}
+    m_ColliderPaths:
+    - - X: 2499707
+        Y: 0
+      - X: 2499707
+        Y: 5000000
+      - X: -2500000
+        Y: 4999707
+      - X: -2499707
+        Y: 0
+  - m_Collider: {fileID: 2114437778157743113}
+    m_ColliderPaths:
+    - - X: 2499707
+        Y: -5000000
+      - X: 2499707
+        Y: 0
+      - X: -2500000
+        Y: -293
+      - X: -2499707
+        Y: -5000000
+  - m_Collider: {fileID: 2170057725234977256}
+    m_ColliderPaths:
+    - - X: 2499707
+        Y: 5000000
+      - X: 2499707
+        Y: 10000000
+      - X: -2500000
+        Y: 9999707
+      - X: -2499707
+        Y: 5000000
+  - m_Collider: {fileID: 7181164315530060001}
+    m_ColliderPaths:
+    - - X: 2499707
+        Y: -10000000
+      - X: 2499707
+        Y: -5000000
+      - X: -2500000
+        Y: -5000293
+      - X: -2499707
+        Y: -10000000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 0.24994141, y: -1}
+      - {x: 0.24994141, y: 1}
+      - {x: -0.25, y: 0.9999414}
+      - {x: -0.24994141, y: -1}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005

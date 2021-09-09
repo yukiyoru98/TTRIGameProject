@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour //Handle Input & win
 {
     public TetroControl tetroControl;
-    public WeightControl weightDistributor;
+    public WeightControl weightControl;
     public TetroSpawn tetroSpawn;
     public GameKiller gameKiller;
     [SerializeField]
@@ -31,11 +31,11 @@ public class PlayerControl : MonoBehaviour //Handle Input & win
         }
         if (Input.GetKey(left_key))
         {
-            weightDistributor.GoLeft();
+            weightControl.GoLeft();
         }
         if (Input.GetKey(right_key))
         {
-            weightDistributor.GoRight();
+            weightControl.GoRight();
         }
     }
     

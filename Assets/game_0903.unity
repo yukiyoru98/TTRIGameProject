@@ -739,7 +739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tetroControl: {fileID: 1437108705}
-  weightDistributor: {fileID: 1437108707}
+  weightControl: {fileID: 1437108707}
   tetroSpawn: {fileID: 1824155691}
   gameKiller: {fileID: 1661846520}
   player: 0
