@@ -16,7 +16,7 @@ public class ChannelBar : MonoBehaviour
         if (Input.GetKey(KeyCode.X))
         {
             bar.fillAmount += 0.1f;
-            if (bar.fillAmount >= 1f)
+            if (bar.fillAmount >= 1f) //bar的數值是float，最少為0f，最高填滿為1f
             {
                 bar.fillAmount = 0f;
             }
